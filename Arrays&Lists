@@ -1,0 +1,9 @@
+        //Arrays
+        string[] Rooms = { "Starting Point", "Main Street", "Store Front", "Tunnel", "Default", "Mayor's Office" };
+        string[] Weapons = { "Brass Knuckles", "Pistol", "Knife", "Bat" };
+        string[] Potions = { "Milk", "Energy" };
+        string[] Treasure = { };
+
+        //Lists
+        List<string> Items = new List<string>() { "Store Front Key", "Golden Key", "Key to the City", "Smokebomb" };
+        List<string> Mobs = new List<string>() { "Computer Programmers", "Main Street Manics", "Thieves", "Underground Gang", "Police" };
