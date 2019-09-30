@@ -1,7 +1,0 @@
-C:\Users\maddogg91\source\repos\Streets_Of_Malice\GameData\Streets_Of_Malice\bin\Debug\Streets_Of_Malice.exe.config
-C:\Users\maddogg91\source\repos\Streets_Of_Malice\GameData\Streets_Of_Malice\bin\Debug\Streets_Of_Malice.exe
-C:\Users\maddogg91\source\repos\Streets_Of_Malice\GameData\Streets_Of_Malice\bin\Debug\Streets_Of_Malice.pdb
-C:\Users\maddogg91\source\repos\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.csprojAssemblyReference.cache
-C:\Users\maddogg91\source\repos\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.csproj.CoreCompileInputs.cache
-C:\Users\maddogg91\source\repos\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.exe
-C:\Users\maddogg91\source\repos\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.pdb
