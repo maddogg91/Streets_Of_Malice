@@ -3,11 +3,17 @@ Dungeon Crawler
 
 Commands.cs (Where we store the methods involving user inputs and commands)
 >GetCommand() Gets user commands
+
 >CommandInput(int roomid) Processes the input from user and directs it accordingly.
+
 >IsValidCommand(string command) Checks if input is a valid command
+
 >IsMovement(string command) Checks if input is a movement command
+
 >ControlMap(int roomid) To be removed, right now this displays the current room.
+
 >ViewAll(int roomid, string[] data or List<string> data) Views data depending on the user input. Rooms, weapons, etc.
+
 >ViewRoom(string room) Simply displays the room in all uppercase, to be changed.
 
 
