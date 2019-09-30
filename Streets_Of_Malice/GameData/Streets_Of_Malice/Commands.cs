@@ -25,7 +25,7 @@ namespace Streets_Of_Malice
 
                 else
                 {
-                     ;
+                     
                     if (IsValidCommand(commands[0]))
                     {
 
@@ -68,7 +68,7 @@ namespace Streets_Of_Malice
         public static bool IsValidCommand(string command)
         {
             bool check = false;
-            string[] commandList = { "n", "north", "s", "south", "e", "east","west", "w", "room", "weapon", "potion" };
+            string[] commandList = { "n", "north", "s", "south", "e", "east","west", "w", "room", "rooms", "weapon","weapons" , "potion", "potions" };
             if (commandList.Contains(command))
             {
                 check = true;
@@ -154,19 +154,7 @@ namespace Streets_Of_Malice
         //}
        
 
-        public static void RoomCommand(int roomid)
-        {
-           
-
-            Console.WriteLine("\nHere are the list of rooms: ");
-            foreach (string element in Options.SetRooms())
-            {
-                Console.WriteLine(">>>>> " + element + "\n");
-
-            }
-            CommandInput(roomid);
-
-        }
+        
 
         public static void ControlMap(int roomid)
         {
@@ -210,69 +198,77 @@ namespace Streets_Of_Malice
 
             }
         }
+        
+
+        //For now I have two ViewAll methods that views the requested input such as rooms or weapons. If allowed, all arrays will become lists and the first ViewAll will be deleted.
+        public static void ViewAll(int roomid,  string[] data)
+        
+        {
+
+            foreach (string element in data)
+            {
+                Standard_Messages.DisplayAll(element);
+
+
+            }
+
+
+            CommandInput(roomid);
+
+        }
+
+        public static void ViewAll(int roomid, List<string> data)
+        {
+            foreach (string element in data)
+            {
+                Standard_Messages.DisplayAll(element);
+
+
+            }
+
+
+            CommandInput(roomid);
+        }
         public static void ControlMap(int roomid, string function, string obj)
         {
 
-          
-
-
-
-           
-
-
-           
 
             switch (function)
             {
                 //Displays a list of rooms
                 case "room":
                 case "rooms":
-                    RoomCommand(roomid);
+                    Standard_Messages.DisplayThis("rooms");
+                    ViewAll(roomid, Options.SetRooms());
                     break;
 
-                //Displays a list of weapons (Unsure if he means in the player's invetory or available in general). I just added generic data here until we can work the code in.
-                //Refactored List into Array as per instructions. List will remain in game data as backup.
-
+                //Displays a list of weapons
 
 
                 case "weapon":
-
-                    List <string> weaponsList= Options.SetWeapons();
+                case "weapons":
+                    List<string> weaponsList = Options.SetWeapons();
                     weaponsList.Sort();
-
-
                     Standard_Messages.DisplayThis("weapons");
-                    foreach (string weapon in weaponsList)
-                    {
-                        Standard_Messages.DisplayAll(weapon);
-                       
-
-                    }
-                    CommandInput(roomid);
+                    ViewAll(roomid, weaponsList);
                     break;
 
                 case "potion":
+                case "potions":
 
-                    string[] Potions = Options.SetPotions();
-                    Array.Sort(Potions);
                     Standard_Messages.DisplayThis("potions");
-                    foreach (string element in Potions)
-                    {
-                        Standard_Messages.DisplayAll(element);
-
-
-                    }
-                    CommandInput(roomid);
+                    ViewAll(roomid, Options.SetPotions());
+                   
                     break;
 
                 default:
                     
-                    CommandInput(roomid);
+                   
                     break;
 
 
             }
-
+            CommandInput(roomid);
 
 
 
