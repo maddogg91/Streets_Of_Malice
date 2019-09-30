@@ -9,7 +9,7 @@ Commands.cs (Where we store the methods involving user inputs and commands)
 >ControlMap(int roomid) To be removed, right now this displays the current room.
 >ViewAll(int roomid, string[] data or List<string> data) Views data depending on the user input. Rooms, weapons, etc.
 >ViewRoom(string room) Simply displays the room in all uppercase, to be changed.
->
+
 
 
 
