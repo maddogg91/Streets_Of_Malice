@@ -80,5 +80,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ItemLibrary\ItemLibrary.csproj">
+      <Project>{1ba7f058-bd8a-40b8-a8d0-dda270faf95b}</Project>
+      <Name>ItemLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -196,6 +196,7 @@ namespace Streets_Of_Malice
             }
             selection = Rooms[x];
             roomid = SwitchRoom(selection);
+
             Commands.CommandInput(roomid);
             return roomid;
 
@@ -241,6 +242,9 @@ namespace Streets_Of_Malice
 
 
             }
+
+            Commands.ViewRoom(Room);
+
             int roomid = number;
 
             return roomid;

@@ -3,32 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using ItemLibrary;
 
 namespace Streets_Of_Malice
 {
     public class Options
     {
+        public static List<Weapons> LoadWeapons()
+        {
+            List<Weapons> weaponList= new List<Weapons>();
+            
+
+            StreamReader inputFile;
+            inputFile = File.OpenText("Weapons.csv");
+            int i = 0;
+            while (!inputFile.EndOfStream)
+            {
+                string line = inputFile.ReadLine();
+                if (i != 0)
+                {
+                    
+                    string[] words = line.Split(',');
+
+                    string id = words[0];
+                    string weapon = words[1];
+                    string input = words[2];
+                    int damage = int.Parse(input);
+                    string desc = words[3];
+                    Weapons loadedWeapon = new Weapons(weapon, desc, damage);
+                    weaponList.Add(loadedWeapon);
+
+
+
+
+                }
+
+                i++;
+
+            }
+            return weaponList;
+        }
+
+
         public static string[] SetRooms()
         {
             string[] Rooms = { "Your apartment", "Main Street", "Store Front", "Tunnel", "Dimly lit room", "Mayor's Office" };
             return Rooms;
         }
 
-        public static List<string> SetWeapons()
+        public static List<Weapons> SetWeapons(List<Weapons> weapons)
         {
-            List<string> weaponsList = new List<string>();
-            weaponsList.Add("Sword");
-            weaponsList.Add("Mace");
-            weaponsList.Add("Baton");
-            weaponsList.Add("Dagger");
-            weaponsList.Add("Club");
-            weaponsList.Add("Knife");
-            weaponsList.Add("Bat");
-            weaponsList.Add("Axe");
-            weaponsList.Add("Pistol");
-            weaponsList.Add("Brass knuckles");
-
-            return weaponsList;
+            return weapons;
         }
 
         public static List<string> SetItems()

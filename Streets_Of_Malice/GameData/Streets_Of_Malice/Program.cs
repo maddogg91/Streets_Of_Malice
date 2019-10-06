@@ -28,7 +28,7 @@ namespace Streets_Of_Malice
 
             Standard_Messages.TitleCard();
             int roomid = Map.SwitchRoom("your apartment");
-            Commands.ControlMap(roomid);
+            
             Commands.CommandInput(roomid);
         }
         
