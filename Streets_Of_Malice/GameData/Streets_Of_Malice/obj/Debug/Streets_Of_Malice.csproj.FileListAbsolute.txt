@@ -12,3 +12,8 @@ C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\Ga
 C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.csproj.CoreCompileInputs.cache
 C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.exe
 C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.pdb
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\bin\Debug\ItemLibrary.dll
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\bin\Debug\ItemLibrary.pdb
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\obj\Debug\Streets_Of_Malice.csproj.CopyComplete
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\bin\Debug\PlayerLibrary.dll
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\Streets_Of_Malice\bin\Debug\PlayerLibrary.pdb

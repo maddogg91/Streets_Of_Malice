@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlayerLibrary;
 
 namespace Streets_Of_Malice
 {
     class Map
     {
-        public static int UserMove(int roomid, string direction)
+        public static int UserMove(int roomid, string direction, Player player)
         {
 
 
@@ -196,7 +197,8 @@ namespace Streets_Of_Malice
             }
             selection = Rooms[x];
             roomid = SwitchRoom(selection);
-            Commands.CommandInput(roomid);
+
+            Commands.CommandInput(roomid, player);
             return roomid;
 
         }
@@ -241,6 +243,9 @@ namespace Streets_Of_Malice
 
 
             }
+
+            Commands.ViewRoom(Room);
+
             int roomid = number;
 
             return roomid;

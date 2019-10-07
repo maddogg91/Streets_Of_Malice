@@ -80,5 +80,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ItemLibrary\ItemLibrary.csproj">
+      <Project>{1ba7f058-bd8a-40b8-a8d0-dda270faf95b}</Project>
+      <Name>ItemLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserLibrary\PlayerLibrary.csproj">
+      <Project>{b8522794-5c6d-4cea-a5a5-6047b71a4a91}</Project>
+      <Name>PlayerLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
