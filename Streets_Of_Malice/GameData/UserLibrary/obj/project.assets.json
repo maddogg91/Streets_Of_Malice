@@ -201,9 +201,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\UserLibrary.csproj",
-      "projectName": "UserLibrary",
-      "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\UserLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj",
+      "projectName": "PlayerLibrary",
+      "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj",
       "packagesPath": "C:\\Users\\maddogg91\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\obj\\",
       "projectStyle": "PackageReference",

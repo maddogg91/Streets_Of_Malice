@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streets_Of_Malice", "Streets_Of_Malice\Streets_Of_Malice.csproj", "{8BB0601A-0AEF-4AE2-98AE-3CED3E849792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserLibrary", "UserLibrary\UserLibrary.csproj", "{B8522794-5C6D-4CEA-A5A5-6047B71A4A91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerLibrary", "UserLibrary\PlayerLibrary.csproj", "{B8522794-5C6D-4CEA-A5A5-6047B71A4A91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobLibrary", "MobLibrary\MobLibrary.csproj", "{04F1D14C-11B4-4167-A4F7-9E7C9808291A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobLibrary", "MobLibrary\MobLibrary.csproj", "{04F1D14C-11B4-4167-A4F7-9E7C9808291A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemLibrary", "ItemLibrary\ItemLibrary.csproj", "{1BA7F058-BD8A-40B8-A8D0-DDA270FAF95B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemLibrary", "ItemLibrary\ItemLibrary.csproj", "{1BA7F058-BD8A-40B8-A8D0-DDA270FAF95B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

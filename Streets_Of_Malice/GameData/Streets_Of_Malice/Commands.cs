@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ItemLibrary;
+using PlayerLibrary;
 
 namespace Streets_Of_Malice
 {
     public class Commands
     {
 
-        public static void CommandInput(int roomid)
+        public static void CommandInput(int roomid, Player player)
         {
             string[] commands = { };
             bool run = true;
@@ -34,7 +35,7 @@ namespace Streets_Of_Malice
 
                         if (IsMovement(commands[0]))
                         {
-                            Map.UserMove(roomid, commands[0]);
+                            Map.UserMove(roomid, commands[0], player);
                         }
 
 
@@ -43,12 +44,12 @@ namespace Streets_Of_Malice
                         {
                             if (commands.Length < 2)
                             {
-                                ControlMap(roomid, commands[0], "");
+                                ControlMap(roomid, commands[0], "", player);
                             }
 
                             else
                             {
-                                ControlMap(roomid, commands[0], commands[1]);
+                                ControlMap(roomid, commands[0], commands[1], player);
                             }
 
                         }
@@ -107,7 +108,7 @@ namespace Streets_Of_Malice
 
 
         //For now I have two ViewAll methods that views the requested input such as rooms or weapons. If allowed, all arrays will become lists and the first ViewAll will be deleted.
-        public static void ViewAll(int roomid, string[] data)
+        public static void ViewAll(int roomid, string[] data, Player player)
 
         {
 
@@ -119,11 +120,11 @@ namespace Streets_Of_Malice
             }
 
 
-            CommandInput(roomid);
+            CommandInput(roomid, player);
 
         }
 
-        public static void ViewAll(int roomid, List<string> data)
+        public static void ViewAll(int roomid, List<string> data, Player player)
         {
             foreach (string element in data)
             {
@@ -133,9 +134,9 @@ namespace Streets_Of_Malice
             }
 
 
-            CommandInput(roomid);
+            CommandInput(roomid, player);
         }
-        public static void ControlMap(int roomid, string function, string obj)
+        public static void ControlMap(int roomid, string function, string obj, Player player)
         {
 
 
@@ -145,7 +146,7 @@ namespace Streets_Of_Malice
                 case "room":
                 case "rooms":
                     Standard_Messages.DisplayThis("rooms");
-                    ViewAll(roomid, Options.SetRooms());
+                    ViewAll(roomid, Options.SetRooms(), player);
                     break;
 
                 //Displays a list of weapons
@@ -169,7 +170,7 @@ namespace Streets_Of_Malice
                 case "potions":
 
                     Standard_Messages.DisplayThis("potions");
-                    ViewAll(roomid, Options.SetPotions());
+                    ViewAll(roomid, Options.SetPotions(), player);
 
                     break;
 
@@ -180,7 +181,7 @@ namespace Streets_Of_Malice
 
 
             }
-            CommandInput(roomid);
+            CommandInput(roomid, player);
 
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlayerLibrary;
 
 namespace Streets_Of_Malice
 {/**
@@ -25,11 +26,8 @@ namespace Streets_Of_Malice
 
         static void Main(string[] args)
         {
-
-            Standard_Messages.TitleCard();
-            int roomid = Map.SwitchRoom("your apartment");
-            
-            Commands.CommandInput(roomid);
+            Options.Startup();
+           
         }
         
 
