@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PlayerLibrary;
+using OptionsLibrary;
+using MobLibrary;
+using ItemLibrary;
+
 
 namespace Streets_Of_Malice
 {/**
@@ -26,7 +30,9 @@ namespace Streets_Of_Malice
 
         static void Main(string[] args)
         {
-            Options.Startup();
+            GameOptions.Startup();
+
+
            
         }
         
