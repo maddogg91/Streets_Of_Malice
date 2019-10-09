@@ -20,6 +20,17 @@ namespace MobLibrary
             _attack = attack;
             _roomID = roomID;
         }
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
 
         public string Name
         {

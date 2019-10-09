@@ -22,6 +22,10 @@ namespace OptionsLibrary
                 string input = Console.ReadLine();
                 switch (input.ToLower())
                 {
+
+                    case "skip":
+                        run = false;
+                        break;
                     case "new game":
                         player = NewPlayer();
                         run = false;
@@ -45,7 +49,12 @@ namespace OptionsLibrary
             List<Rooms> rooms = LoadOptions.LoadRooms();
             Rooms room = MakeRoom(rooms, player.RoomID);
             SearchCommands.ViewRoom(room.RoomName);
-            GeneralCommands.CommandInput(player);
+            List<Items> items = LoadOptions.LoadItems();
+            List<Potions> potions = LoadOptions.LoadPotions();
+            List<Treasures> treasures = LoadOptions.LoadTreasures();
+            List<Weapons> weapons = LoadOptions.LoadWeapons();
+            List<Mobs> mobs = LoadOptions.LoadMobs();
+            GeneralCommands.CommandInput(player, rooms, items, potions, treasures, weapons, mobs);
         }
 
      

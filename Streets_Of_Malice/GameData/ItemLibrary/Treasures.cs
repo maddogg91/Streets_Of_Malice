@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ItemLibrary
 {
-    class Treasures
+    public class Treasures
     {
         private string _id;
         private string _name;

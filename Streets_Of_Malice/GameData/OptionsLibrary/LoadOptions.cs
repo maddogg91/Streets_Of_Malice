@@ -1,6 +1,7 @@
 ﻿using System;
 
 using System.IO;
+using System.Linq;
 using PlayerLibrary;
 using ItemLibrary;
 using System.Collections.Generic;
@@ -197,8 +198,9 @@ namespace OptionsLibrary
                     int damage = int.Parse(input);
                     string desc = words[3];
                     Weapons loadedWeapon = new Weapons(id, weapon, desc, damage);
+                    
                     weaponList.Add(loadedWeapon);
-
+                    weaponList.OrderBy(x => x.WeaponName);
 
 
 
@@ -207,6 +209,7 @@ namespace OptionsLibrary
                 i++;
 
             }
+            
             return weaponList;
         }
 
@@ -319,6 +322,42 @@ namespace OptionsLibrary
 
             }
             return mobsList;
+        }
+
+        public static List<Treasures> LoadTreasures()
+        {
+            List<Treasures> treasureList = new List<Treasures>();
+
+
+            StreamReader inputFile;
+            inputFile = File.OpenText("Treasures.csv");
+            int i = 0;
+            while (!inputFile.EndOfStream)
+            {
+                string line = inputFile.ReadLine();
+                if (i != 0)
+                {
+
+                    string[] words = line.Split(',');
+
+                    string id = words[0];
+                    string name = words[1];
+                    string desc = words[2];
+
+                    
+
+                    Treasures loadedTreasures = new Treasures(id, name, desc);
+                    treasureList.Add(loadedTreasures);
+
+
+
+
+                }
+
+                i++;
+
+            }
+            return treasureList;
         }
     }
 }

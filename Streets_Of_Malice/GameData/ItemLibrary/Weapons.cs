@@ -18,7 +18,17 @@ namespace ItemLibrary
             _damage = damage;
             _isEquipped = false;
         }
-
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
         public string WeaponName
         {
             get
