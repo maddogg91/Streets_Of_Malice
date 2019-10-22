@@ -9,6 +9,7 @@ namespace PlayerLibrary
         private string _password;
         private Classes _class;
         private Type _type;
+        private string _roomID;
 
         public enum Classes
         {
@@ -25,13 +26,14 @@ namespace PlayerLibrary
             Skinny
         }
 
-        public Player(string user, string password, Classes userClass, Type type)
+        public Player(string user, string password, Classes userClass, Type type, string roomID)
         {
             
             _username = user;
             _password = password;
             _class = userClass;
             _type = type;
+            _roomID = roomID;
         }
 
         public string Username
@@ -84,6 +86,19 @@ namespace PlayerLibrary
             set
             {
                 _type = value;
+            }
+        }
+
+        public string RoomID
+        {
+            get
+            {
+                return _roomID;
+            }
+
+            set
+            {
+                _roomID = value;
             }
         }
     }

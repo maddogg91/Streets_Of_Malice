@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ItemLibrary\ItemLibrary.csproj" />
+    <ProjectReference Include="..\MobLibrary\MobLibrary.csproj" />
+    <ProjectReference Include="..\UserLibrary\PlayerLibrary.csproj" />
+  </ItemGroup>
+
+</Project>

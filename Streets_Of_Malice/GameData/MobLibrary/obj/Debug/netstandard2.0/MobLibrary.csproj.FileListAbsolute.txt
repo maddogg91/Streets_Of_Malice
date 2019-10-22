@@ -1,0 +1,9 @@
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\bin\Debug\netstandard2.0\MobLibrary.deps.json
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\bin\Debug\netstandard2.0\MobLibrary.dll
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\bin\Debug\netstandard2.0\MobLibrary.pdb
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\obj\Debug\netstandard2.0\MobLibrary.csprojAssemblyReference.cache
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\obj\Debug\netstandard2.0\MobLibrary.csproj.CoreCompileInputs.cache
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\obj\Debug\netstandard2.0\MobLibrary.AssemblyInfoInputs.cache
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\obj\Debug\netstandard2.0\MobLibrary.AssemblyInfo.cs
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\obj\Debug\netstandard2.0\MobLibrary.dll
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\MobLibrary\obj\Debug\netstandard2.0\MobLibrary.pdb
