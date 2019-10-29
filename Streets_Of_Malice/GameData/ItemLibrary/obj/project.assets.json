@@ -179,30 +179,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maddogg91\\.nuget\\packages\\": {},
+    "C:\\Users\\charityr9171\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
       "projectName": "ItemLibrary",
-      "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
-      "packagesPath": "C:\\Users\\maddogg91\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\obj\\",
+      "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
+      "packagesPath": "C:\\Users\\charityr9171\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\maddogg91\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\charityr9171\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

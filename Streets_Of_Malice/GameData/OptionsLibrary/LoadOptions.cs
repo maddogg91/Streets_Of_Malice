@@ -213,6 +213,8 @@ namespace OptionsLibrary
             return weaponList;
         }
 
+       
+
 
         //LOAD ITEMS INFO
         public static List<Items> LoadItems()
@@ -237,7 +239,7 @@ namespace OptionsLibrary
                     string input = words[3];
                     int uses = int.Parse(input);
 
-                    Items loadedItem = new Items(id, name, desc, uses);
+                    Items loadedItem = Items.GetItems(id, name, desc, uses);
                     itemsList.Add(loadedItem);
 
 
@@ -272,7 +274,7 @@ namespace OptionsLibrary
                     string input = words[3];
                     int hp = int.Parse(input);
 
-                    Potions loadedPotion = new Potions(id, name, desc, hp);
+                    Potions loadedPotion = Potions.GetPotions(id, name, desc, hp);
                     potionsList.Add(loadedPotion);
 
 

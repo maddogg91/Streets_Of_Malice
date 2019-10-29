@@ -4,72 +4,26 @@ using System.Text;
 
 namespace ItemLibrary
 {
-    public class Items
+    public class Items : IPlayerItems
     {
-        private string _id;
-        private string _name;
-        private string _description;
-        private int _uses;
-        
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
+        public int Uses { get; set; }
 
-        public Items(string id, string name, string desc, int uses)
+        public static Items GetItems(string id, string name, string desc, int uses)
         {
-            _id = id;
-            _name = name;
-            _description = desc;
-            _uses = uses;
-
-        }
-
-        public string ID
-        {
-            get
-            { 
-                return _id;
-            }
-            set
+            return new Items
             {
-                _id = value;
-            }
-        }
+                ID = id,
+                Name = name,
+                Description = desc,
+                Uses = uses
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-
-        }
-        public string Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
-
-        }
-
-        public int Uses
-        {
-            get
-            {
-                return _uses;
-            }
-            set
-            {
-                _uses = value;
-            }
-
+            };
         }
     }
+
+
 }
