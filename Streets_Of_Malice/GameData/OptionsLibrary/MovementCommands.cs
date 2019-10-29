@@ -9,9 +9,9 @@ namespace OptionsLibrary
 {
     public class MovementCommands
     {
-        public static void UserMove(string direction, Player player)
+        public static void UserMove(string direction, Player player, List<Rooms> rooms)
         {
-            List<Rooms> rooms = LoadOptions.LoadRooms();
+            
 
             Rooms room = GameOptions.MakeRoom(rooms, player.RoomID);
 
@@ -107,7 +107,7 @@ namespace OptionsLibrary
 
             room = GameOptions.MakeRoom(rooms, player.RoomID);
             SearchCommands.ViewRoom(room.RoomName);
-            GeneralCommands.CommandInput(player);
+            
 
 
         }

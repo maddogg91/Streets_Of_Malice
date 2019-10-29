@@ -10,7 +10,8 @@ namespace OptionsLibrary
 {
     class GeneralCommands
     {
-        public static void ControlMap(string function, string obj, Player player)
+        public static void ControlMap(string function, string obj, Player player, List<Rooms> rooms, List<Items> items, List<Potions> potions, List<Treasures> treasures, 
+            List<Weapons> weapons, List<Mobs> mobs)
         {
 
 
@@ -20,20 +21,24 @@ namespace OptionsLibrary
                 case "room":
                 case "rooms":
                     StandardMessages.DisplayThis("rooms");
-                    SearchCommands.ViewAll(LoadOptions.LoadRooms(), player);
+                    SearchCommands.ViewAll(rooms);
                     break;
 
                 //Displays a list of weapons
 
+                case "look":
+                    SearchCommands.LookObject(obj, player, rooms, items, potions, treasures, weapons, mobs);
+                    break;
+
 
                 case "weapon":
                 case "weapons":
-                    List<Weapons> weaponsList = LoadOptions.LoadWeapons();
-                    weaponsList.Sort();
+
+
                     //Standard_Messages.DisplayThis("weapons");
                     //ViewAll(roomid, weaponsList);
-
-                    foreach (Weapons weapon in weaponsList)
+                    weapons.OrderBy(x => x.WeaponName);
+                    foreach (Weapons weapon in weapons)
                     {
                         Console.WriteLine(weapon.WeaponName + " (" + weapon.Damage + " " + weapon.Description + ")\n");
                     }
@@ -44,7 +49,7 @@ namespace OptionsLibrary
                 case "potions":
 
                     StandardMessages.DisplayThis("potions");
-                    SearchCommands.ViewAll(LoadOptions.LoadPotions(), player);
+                    SearchCommands.ViewAll(potions);
 
                     break;
 
@@ -55,22 +60,24 @@ namespace OptionsLibrary
 
 
             }
-            CommandInput(player);
+          
 
 
 
         }
 
-        public static void CommandInput(Player player)
+        public static void CommandInput(Player player, List<Rooms> rooms, List<Items> items, List<Potions> potions, List<Treasures> treasures, List<Weapons> weapons, List<Mobs> mobs)
         {
             string[] commands = { };
             bool run = true;
-            while (run == true)
+            do
             {
+                
                 string input = GetCommand();
+                
                 commands = input.Split(' ');
-
-                if (commands.Length > 2)
+                string text = commands[0];
+                if (commands.Length == 0)
                 {
                     Console.WriteLine("Your command is invalid");
                 }
@@ -85,21 +92,42 @@ namespace OptionsLibrary
 
                         if (IsMovement(commands[0]))
                         {
-                            MovementCommands.UserMove(commands[0], player);
+                            MovementCommands.UserMove(commands[0], player, rooms);
                         }
 
 
                         //Simplify code here to fix Multiple If/Else statements.
                         else
                         {
-                            if (commands.Length < 2)
+                            if (commands.Length == 1)
                             {
-                                ControlMap(commands[0], "", player);
+                                ControlMap(commands[0], "", player, rooms, items, potions, treasures, weapons, mobs);
                             }
 
                             else
                             {
-                                ControlMap(commands[0], commands[1], player);
+                                int i = 0;
+                                List<string> objects = new List<string>();
+                                string word = "";
+                                StringBuilder builder = new StringBuilder();
+                                foreach (string command in commands)
+                                {
+                                    
+                                    if(i!=0 && i < commands.Length)
+                                    {
+                                        word = word + command + " ";
+                                        
+                                    }
+                                    if(i== commands.Length)
+                                    {
+                                        word = word + command;
+                                    }
+                                    i++;
+                                }
+
+                              
+                                
+                                ControlMap(commands[0], word, player, rooms, items, potions, treasures, weapons, mobs);
                             }
 
                         }
@@ -111,16 +139,16 @@ namespace OptionsLibrary
                     }
 
                 }
-
+                CommandInput(player, rooms, items, potions, treasures, weapons, mobs);
             }
-
-
+            while (run == true);
+            
         }
 
         public static bool IsValidCommand(string command)
         {
             bool check = false;
-            string[] commandList = { "n", "north", "s", "south", "e", "east", "west", "w", "room", "rooms", "weapon", "weapons", "potion", "potions" };
+            string[] commandList = { "n", "north", "s", "south", "e", "east", "west", "w", "room", "rooms", "weapon", "weapons", "potion", "potions", "look" };
             if (commandList.Contains(command))
             {
                 check = true;
