@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
+        "projectName": "ItemLibrary",
+        "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
+        "packagesPath": "C:\\Users\\charityr9171\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\charityr9171\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj",
+        "projectName": "PlayerLibrary",
+        "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj",
+        "packagesPath": "C:\\Users\\charityr9171\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\charityr9171\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
+                "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

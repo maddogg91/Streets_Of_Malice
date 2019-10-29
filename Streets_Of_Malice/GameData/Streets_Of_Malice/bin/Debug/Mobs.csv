@@ -1,0 +1,6 @@
+﻿MobID,MobName,Description,Hp,Attack,RoomID
+M1,Main Street Manics,Crazed citizens of Main street.,10,2,R2
+M2,Thieves,They steal what they want.,50,4,R3
+M3,Underground Gang,The gang that runs the down under.,75,8,R4
+M4,Police,Untrustworthy officers of their own law.,300,25,R5
+M5,Computer Programmers,They haven't seen the light in a while.,1,0,R6

@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PlayerLibrary;
+using OptionsLibrary;
+using MobLibrary;
+using ItemLibrary;
+
 
 namespace Streets_Of_Malice
 {/**
 
-* September 15th, 2019
+* October 8th, 2019
 
 * CSC 253
 
@@ -15,7 +20,7 @@ namespace Streets_Of_Malice
 * 
 * Robert Charity
 
-* Streets of Malice (Sprint #1)
+* Streets of Malice (Sprint #2)
 * 
 * Streets of Malice is an urban inspired dungeon crawler. Currently the build tests motion north, south, east, and west. Also allows user to see list of all available rooms and weapons.
 
@@ -25,11 +30,10 @@ namespace Streets_Of_Malice
 
         static void Main(string[] args)
         {
+            GameOptions.Startup();
 
-            Standard_Messages.TitleCard();
-            int roomid = Map.SwitchRoom("your apartment");
-            Commands.ControlMap(roomid);
-            Commands.CommandInput(roomid);
+
+           
         }
         
 
