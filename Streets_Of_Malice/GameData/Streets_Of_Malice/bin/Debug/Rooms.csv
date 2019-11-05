@@ -1,0 +1,7 @@
+﻿RoomID,RoomName,North Exit,South Exit,West Exit,East Exit,Desc
+R1,Your Apartment,R2,R4,R6,N/A,Filler
+R2,Main Street,R5,R1,N/A,R3,Filler
+R3,Store Front,N/A,N/A,R2,R4,Filler
+R4,Tunnel,R1,N/A,R3,N/A,Filler
+R5,Mayor's Office,N/A,R2,N/A,N/A,Filler
+R6,Dimly Lit Room,N/A,N/A,N/A,N/A,Filler

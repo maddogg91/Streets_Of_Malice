@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Streets_Of_Malice
+namespace OptionsLibrary
 {
-    public class Standard_Messages
+    class StandardMessages
     {
         public static void TitleCard()
         {
@@ -38,20 +36,20 @@ namespace Streets_Of_Malice
                 " 8    Y     888  d8(  888   888   888  888   .o8 888    .o \n" +
                 "o8o        o888o `Y888^^8o o888o o888o `Y8bod8P' `Y8bod8P' \n";
 
-           
+
 
             Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n" + title + title2 + title3 + "\nPress Enter to continue");
             Console.ReadLine();
             Console.WriteLine("\n\n\n\n\n\n\n");
             Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou wake up in your dirty apartment... It's loud outside... sounds like the manics are out causing chaos on main street.");
-           
 
-            
+
+
         }
 
         public static void DisplayThis(string word)
         {
-            Console.WriteLine("\nHere are the list of " + word +":");
+            Console.WriteLine("\nHere are the list of " + word + ":");
         }
 
         public static void DisplayAll(object entry)
@@ -59,7 +57,6 @@ namespace Streets_Of_Malice
 
             Console.WriteLine(">>>>> " + entry + "\n");
         }
-
 
     }
 }
