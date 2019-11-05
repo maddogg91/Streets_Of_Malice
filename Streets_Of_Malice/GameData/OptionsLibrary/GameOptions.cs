@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using PlayerLibrary;
+using CharacterLibrary;
+using InterfaceLibrary;
 using ItemLibrary;
 using System.IO;
-using MobLibrary;
 using System.Linq;
 
 namespace OptionsLibrary
@@ -13,7 +13,7 @@ namespace OptionsLibrary
     {
         public static void Startup()
         {
-            Player player = new Player(" ", " ", Player.Classes.Brawler, Player.Type.Athletic, "R1");
+            Player player = Player.GetPlayer(" ", " ", Player.Classes.Brawler, Player.Type.Athletic, "R1");
             bool run = true;
 
             do
@@ -46,28 +46,29 @@ namespace OptionsLibrary
             StandardMessages.TitleCard();
 
             //int roomid = Map.SwitchRoom(room);
-            List<Rooms> rooms = LoadOptions.LoadRooms();
-            Rooms room = MakeRoom(rooms, player.RoomID);
-            SearchCommands.ViewRoom(room.RoomName);
-            List<Items> items = LoadOptions.LoadItems();
-            List<Potions> potions = LoadOptions.LoadPotions();
-            List<Treasures> treasures = LoadOptions.LoadTreasures();
-            List<Weapons> weapons = LoadOptions.LoadWeapons();
-            List<Mobs> mobs = LoadOptions.LoadMobs();
-            GeneralCommands.CommandInput(player, rooms, items, potions, treasures, weapons, mobs);
+            
+            
+            
+           
+           
+            GameObjects options= GameObjects.GetObjects(LoadOptions.LoadMobs(), LoadOptions.LoadRooms(), LoadOptions.LoadItems(), LoadOptions.LoadPotions(), LoadOptions.LoadTreasures(), LoadOptions.LoadWeapons(), player);
+            Rooms room = MakeRoom(options.Rooms, options.Player.RoomID);
+            SearchCommands.ViewRoom(room.Name);
+
+            GeneralCommands.CommandInput(options);
         }
 
      
       
         
         //Swap Rooms
-        public static Rooms MakeRoom(List<Rooms> rooms, string roomID)
+        public static Rooms MakeRoom(List<Rooms> options, string roomID)
         {
-            Rooms room = new Rooms(" ", " ", " ", " ", " ", " ", " ");
-            foreach (Rooms element in rooms)
+            Rooms room = Rooms.GetRooms(" ", " ", " ", " ", " ", " ", " ");
+            foreach (Rooms element in options)
             {
 
-                if (roomID == element.RoomID)
+                if (roomID == element.ID)
                 {
                     room = element;
                 }
@@ -192,9 +193,9 @@ namespace OptionsLibrary
                 }
             }
             while (validType == false);
-            Player player = new Player(user, password, userClass, type, "R1");
+            Player player = Player.GetPlayer(user, password, userClass, type, "R1");
             SavePlayerInfo(player, player.RoomID);
-            Console.WriteLine("\nConfirmed! \nPlayer: " + player.Username + "\nJob: " + player.UserClass);
+            Console.WriteLine("\nConfirmed! \nPlayer: " + player.Name + "\nJob: " + player.Class);
             Console.ReadLine();
             return player;
         }
@@ -205,7 +206,7 @@ namespace OptionsLibrary
             StreamWriter outputFile;
             string userClass = " ";
             string type = " ";
-            switch (player.UserClass.ToString())
+            switch (player.Class.ToString())
             {
                 case "Brawler":
                     userClass = "Brawler";
@@ -222,12 +223,12 @@ namespace OptionsLibrary
 
             }
 
-            switch (player.UserType.ToString())
+            switch (player.BodyType.ToString())
             {
                 case "Athletic":
                 case "Skinny":
                 case "Fat":
-                    type = player.UserType.ToString();
+                    type = player.BodyType.ToString();
                     break;
 
                 case "BodyBuilder":
@@ -236,9 +237,9 @@ namespace OptionsLibrary
             }
 
 
-            string path = player.Username + ".txt";
+            string path = player.UserName + ".txt";
             outputFile = File.CreateText(path);
-            outputFile.WriteLine(player.Username);
+            outputFile.WriteLine(player.UserName);
             outputFile.WriteLine(player.Password);
             outputFile.WriteLine(userClass);
             outputFile.WriteLine(type);

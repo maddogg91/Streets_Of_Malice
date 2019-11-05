@@ -1,0 +1,5 @@
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\InterfaceLibrary\bin\Debug\InterfaceLibrary.dll
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\InterfaceLibrary\bin\Debug\InterfaceLibrary.pdb
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\InterfaceLibrary\obj\Debug\InterfaceLibrary.csprojAssemblyReference.cache
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\InterfaceLibrary\obj\Debug\InterfaceLibrary.dll
+C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\InterfaceLibrary\obj\Debug\InterfaceLibrary.pdb

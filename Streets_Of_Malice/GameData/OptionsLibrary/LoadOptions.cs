@@ -1,11 +1,9 @@
 ﻿using System;
-
 using System.IO;
 using System.Linq;
-using PlayerLibrary;
+using CharacterLibrary;
 using ItemLibrary;
 using System.Collections.Generic;
-using MobLibrary;
 
 namespace OptionsLibrary
 {
@@ -16,7 +14,7 @@ namespace OptionsLibrary
 
         public static Player LoadPlayer()
         {
-            Player player = new Player(" ", " ", Player.Classes.Brawler, Player.Type.Athletic, "R1");
+            Player player = Player.GetPlayer(" ", " ", Player.Classes.Brawler, Player.Type.Athletic, "R1");
             StreamReader inputFile;
 
             Console.Write("\nEnter the player's name: ");
@@ -96,7 +94,7 @@ namespace OptionsLibrary
 
                 }
 
-                player = new Player(user, password, userClass, type, "R1");
+                player = Player.GetPlayer(user, password, userClass, type, "R1");
                 inputFile.Close();
                 return player;
             }
@@ -127,7 +125,7 @@ namespace OptionsLibrary
         public static List<Rooms> LoadRooms()
         {
             int i = 0;
-            Rooms room = new Rooms(" ", " ", " ", " ", " ", " ", " ");
+            Rooms room = Rooms.GetRooms(" ", " ", " ", " ", " ", " ", " ");
             List<Rooms> rooms = new List<Rooms>();
             StreamReader inputFile;
             try
@@ -145,7 +143,7 @@ namespace OptionsLibrary
                         string exitS = words[3];
                         string exitW = words[4];
                         string exitE = words[5];
-                        room = new Rooms(roomID, roomName, exitN, exitS, exitW, exitE, words[6]);
+                        room = Rooms.GetRooms(roomID, roomName, exitN, exitS, exitW, exitE, words[6]);
                         rooms.Add(room);
                     }
                     i++;
@@ -165,7 +163,7 @@ namespace OptionsLibrary
                 Console.WriteLine("Creating rooms...");
                 for (i = 0; i < 6; i++)
                 {
-                    room = new Rooms(roomIDs[i], roomNames[i], exitN[i], exitS[i], exitW[i], exitE[i], "filler");
+                    room = Rooms.GetRooms(roomIDs[i], roomNames[i], exitN[i], exitS[i], exitW[i], exitE[i], "filler");
                     rooms.Add(room);
                 }
                 return rooms;
@@ -197,10 +195,10 @@ namespace OptionsLibrary
                     string input = words[2];
                     int damage = int.Parse(input);
                     string desc = words[3];
-                    Weapons loadedWeapon = new Weapons(id, weapon, desc, damage);
+                    Weapons loadedWeapon = Weapons.GetWeapons(id, weapon, desc, damage);
                     
                     weaponList.Add(loadedWeapon);
-                    weaponList.OrderBy(x => x.WeaponName);
+                    weaponList.OrderBy(x => x.Name);
 
 
 
@@ -212,6 +210,8 @@ namespace OptionsLibrary
             
             return weaponList;
         }
+
+       
 
 
         //LOAD ITEMS INFO
@@ -237,7 +237,7 @@ namespace OptionsLibrary
                     string input = words[3];
                     int uses = int.Parse(input);
 
-                    Items loadedItem = new Items(id, name, desc, uses);
+                    Items loadedItem = Items.GetItems(id, name, desc, uses);
                     itemsList.Add(loadedItem);
 
 
@@ -272,7 +272,7 @@ namespace OptionsLibrary
                     string input = words[3];
                     int hp = int.Parse(input);
 
-                    Potions loadedPotion = new Potions(id, name, desc, hp);
+                    Potions loadedPotion = Potions.GetPotions(id, name, desc, hp);
                     potionsList.Add(loadedPotion);
 
 
@@ -310,7 +310,7 @@ namespace OptionsLibrary
                     
                     int attack = int.Parse(words[4]);
 
-                    Mobs loadedMobs = new Mobs(id, name, desc, hp, attack, words[5]) ;
+                    Mobs loadedMobs = Mobs.GetMobs (id, name, desc, hp, attack, words[5]) ;
                     mobsList.Add(loadedMobs);
 
 
@@ -346,7 +346,7 @@ namespace OptionsLibrary
 
                     
 
-                    Treasures loadedTreasures = new Treasures(id, name, desc);
+                    Treasures loadedTreasures = Treasures.GetTreasures(id, name, desc);
                     treasureList.Add(loadedTreasures);
 
 

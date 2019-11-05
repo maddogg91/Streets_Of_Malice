@@ -1,78 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using InterfaceLibrary;
 
 namespace ItemLibrary
 {
-    public class Potions
+    public class Potions : IEnvironment
     {
-        private string _id;
-        private string _name;
-        private string _description;
-        private int _hp;
-        
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
-        public Potions(string id, string name, string desc, int hp)
+        public int HP { get; set; }
+
+        public static Potions GetPotions(string id, string name, string desc, int hp)
         {
-            _id = id;
-            _name = name;
-            _description = desc;
-            _hp = hp;
-          
+            return new Potions
+            {
+                ID = id,
+                Name = name,
+                Description = desc,
+                HP= hp
+
+            };
         }
-
-        public string ID
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-
-        }
-        public string Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
-
-        }
-
-        public int Hp
-        {
-            get
-            {
-                return _hp;
-            }
-            set
-            {
-                _hp = value;
-            }
-
-        }
-
-
-
     }
 }

@@ -10,3 +10,15 @@ C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\Ga
 C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.csproj.CopyComplete
 C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.dll
 C:\Users\maddogg91\source\repos\maddogg91\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.pdb
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\bin\Debug\netstandard2.0\PlayerLibrary.deps.json
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\bin\Debug\netstandard2.0\PlayerLibrary.dll
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\bin\Debug\netstandard2.0\PlayerLibrary.pdb
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\bin\Debug\netstandard2.0\ItemLibrary.dll
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\bin\Debug\netstandard2.0\ItemLibrary.pdb
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.csprojAssemblyReference.cache
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.AssemblyInfoInputs.cache
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.AssemblyInfo.cs
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.csproj.CopyComplete
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.dll
+C:\Users\charityr9171\Source\Repos\Streets_Of_Malice\Streets_Of_Malice\GameData\UserLibrary\obj\Debug\netstandard2.0\PlayerLibrary.pdb
