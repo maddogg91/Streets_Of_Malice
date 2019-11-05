@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\InterfaceLibrary\InterfaceLibrary.csproj" />
     <ProjectReference Include="..\ItemLibrary\ItemLibrary.csproj" />
-    <ProjectReference Include="..\MobLibrary\MobLibrary.csproj" />
-    <ProjectReference Include="..\UserLibrary\PlayerLibrary.csproj" />
+    <ProjectReference Include="..\UserLibrary\CharacterLibrary.csproj" />
   </ItemGroup>
 
 </Project>

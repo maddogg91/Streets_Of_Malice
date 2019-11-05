@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using PlayerLibrary;
+using CharacterLibrary;
 using ItemLibrary;
-using MobLibrary;
+using InterfaceLibrary;
+
 
 namespace OptionsLibrary
 {
     public class SearchCommands
     {
-        public static void LookObject(string obj, Player player, List<Rooms> rooms, List<Items> items, List<Potions> potions, List<Treasures> treasures,
-            List<Weapons> weapons, List<Mobs> mobs)
+        public static void LookObject(string obj, GameObjects options)
         {
-            
 
             
+            
 
-            foreach (Items element in items)
+            foreach (Items element in options.Items)
             {
                 string item = element.Name.ToString();
                 item = item.ToLower();
@@ -27,19 +27,19 @@ namespace OptionsLibrary
                 }
             }
 
-            foreach (Weapons element in weapons)
+            foreach (Weapons element in options.Weapons)
             {
-                string weapon = element.WeaponName.ToString();
+                string weapon = element.Name.ToString();
                 weapon = weapon.ToLower();
                 if (obj.Contains(weapon))
                 {
                   
-                    Console.WriteLine("Weapon ID: " + element.ID + "\n" + "Weapon Name: " + element.WeaponName + "\n" + "Weapon Description: " + element.Description + 
+                    Console.WriteLine("Weapon ID: " + element.ID + "\n" + "Weapon Name: " + element.Name + "\n" + "Weapon Description: " + element.Description + 
                         "\n" + "Weapon Power: " + element.Damage + "\n");
                 }
             }
 
-            foreach (Potions element in potions)
+            foreach (Potions element in options.Potions)
             {
                 string potion = element.Name.ToString();
                 potion = potion.ToLower();
@@ -50,14 +50,15 @@ namespace OptionsLibrary
                 }
             }
 
-            foreach (Mobs element in mobs)
+            foreach (Mobs element in options.Mobs)
             {
+                Rooms room = GameOptions.MakeRoom(options.Rooms, element.RoomID);
                 string mob = element.Name.ToString();
                 mob = mob.ToLower();
                 if (obj.Contains(mob))
                 {
                     
-                    Console.WriteLine("Mob ID: " + element.ID + "\n" + "Mob Name: " + element.Name + "\nMob Description: " + element.Description + "\n");
+                    Console.WriteLine("Mob ID: " + element.ID + "\n" + "Mob Name: " + element.Name + "\nMob Description: " + element.Description + "\nCurrent Room: " + room.Name);
                 }
             }
 
@@ -91,7 +92,7 @@ namespace OptionsLibrary
         {
             foreach (Rooms element in data)
             {
-                StandardMessages.DisplayAll(element.RoomName.ToString());
+                StandardMessages.DisplayAll(element.Name.ToString());
 
 
             }
@@ -122,7 +123,7 @@ namespace OptionsLibrary
         {
             foreach (Rooms element in data)
             {
-                StandardMessages.DisplayAll(element.RoomName.ToString());
+                StandardMessages.DisplayAll(element.Name.ToString());
 
 
             }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using InterfaceLibrary;
 
 namespace ItemLibrary
 {
-    public class Items : IPlayerItems
+    public class Items : IEnvironment
     {
         public string ID { get; set; }
         public string Name { get; set; }

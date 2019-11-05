@@ -81,17 +81,13 @@
       <Project>{1ba7f058-bd8a-40b8-a8d0-dda270faf95b}</Project>
       <Name>ItemLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MobLibrary\MobLibrary.csproj">
-      <Project>{04f1d14c-11b4-4167-a4f7-9e7c9808291a}</Project>
-      <Name>MobLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OptionsLibrary\OptionsLibrary.csproj">
       <Project>{6e5915ac-ebdd-4725-a2da-41e8da8aed00}</Project>
       <Name>OptionsLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UserLibrary\PlayerLibrary.csproj">
+    <ProjectReference Include="..\UserLibrary\CharacterLibrary.csproj">
       <Project>{b8522794-5c6d-4cea-a5a5-6047b71a4a91}</Project>
-      <Name>PlayerLibrary</Name>
+      <Name>CharacterLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

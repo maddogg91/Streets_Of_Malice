@@ -26,37 +26,40 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "ItemLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/ItemLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ItemLibrary.dll": {}
-        }
-      },
-      "MobLibrary/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/MobLibrary.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MobLibrary.dll": {}
-        }
-      },
-      "PlayerLibrary/1.0.0": {
+      "CharacterLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "InterfaceLibrary": "1.0.0",
           "ItemLibrary": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/PlayerLibrary.dll": {}
+          "bin/placeholder/CharacterLibrary.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PlayerLibrary.dll": {}
+          "bin/placeholder/CharacterLibrary.dll": {}
+        }
+      },
+      "InterfaceLibrary/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/InterfaceLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InterfaceLibrary.dll": {}
+        }
+      },
+      "ItemLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "InterfaceLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ItemLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ItemLibrary.dll": {}
         }
       }
     }
@@ -205,66 +208,68 @@
         "netstandard.library.nuspec"
       ]
     },
+    "CharacterLibrary/1.0.0": {
+      "type": "project",
+      "path": "../UserLibrary/CharacterLibrary.csproj",
+      "msbuildProject": "../UserLibrary/CharacterLibrary.csproj"
+    },
+    "InterfaceLibrary/1.0.0": {
+      "type": "project",
+      "path": "../InterfaceLibrary/InterfaceLibrary.csproj",
+      "msbuildProject": "../InterfaceLibrary/InterfaceLibrary.csproj"
+    },
     "ItemLibrary/1.0.0": {
       "type": "project",
       "path": "../ItemLibrary/ItemLibrary.csproj",
       "msbuildProject": "../ItemLibrary/ItemLibrary.csproj"
-    },
-    "MobLibrary/1.0.0": {
-      "type": "project",
-      "path": "../MobLibrary/MobLibrary.csproj",
-      "msbuildProject": "../MobLibrary/MobLibrary.csproj"
-    },
-    "PlayerLibrary/1.0.0": {
-      "type": "project",
-      "path": "../UserLibrary/PlayerLibrary.csproj",
-      "msbuildProject": "../UserLibrary/PlayerLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "CharacterLibrary >= 1.0.0",
+      "InterfaceLibrary >= 1.0.0",
       "ItemLibrary >= 1.0.0",
-      "MobLibrary >= 1.0.0",
-      "NETStandard.Library >= 2.0.3",
-      "PlayerLibrary >= 1.0.0"
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\charityr9171\\.nuget\\packages\\": {},
+    "C:\\Users\\maddogg91\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\OptionsLibrary\\OptionsLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\OptionsLibrary\\OptionsLibrary.csproj",
       "projectName": "OptionsLibrary",
-      "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\OptionsLibrary\\OptionsLibrary.csproj",
-      "packagesPath": "C:\\Users\\charityr9171\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\OptionsLibrary\\obj\\",
+      "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\OptionsLibrary\\OptionsLibrary.csproj",
+      "packagesPath": "C:\\Users\\maddogg91\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\OptionsLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\charityr9171\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\maddogg91\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
-              "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj"
+            "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj": {
+              "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj"
             },
-            "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\MobLibrary\\MobLibrary.csproj": {
-              "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\MobLibrary\\MobLibrary.csproj"
+            "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
+              "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj"
             },
-            "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj": {
-              "projectPath": "C:\\Users\\charityr9171\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\PlayerLibrary.csproj"
+            "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj": {
+              "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj"
             }
           }
         }
@@ -286,10 +291,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

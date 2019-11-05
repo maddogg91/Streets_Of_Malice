@@ -1,64 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using InterfaceLibrary;
 
 namespace ItemLibrary
 {
-    public class Treasures
+    public class Treasures : IEnvironment
     {
-        private string _id;
-        private string _name;
-        private string _description;
-        
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
 
-        public Treasures(string id, string name, string desc)
+        public static Treasures GetTreasures(string id, string name, string desc)
         {
-            _id = id;
-            _name = name;
-            _description = desc;
-            
+            return new Treasures
+            {
+                ID = id,
+                Name = name,
+                Description = desc,
+                
 
+            };
         }
 
 
-        public string ID
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
 
-        }
-        public string Description
-        {
-            get
-            {
-                return _description;
-            }
-            set
-            {
-                _description = value;
-            }
 
-        }
-
-       
     }
 }

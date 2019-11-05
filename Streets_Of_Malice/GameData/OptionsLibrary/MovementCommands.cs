@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using PlayerLibrary;
+using CharacterLibrary;
 using ItemLibrary;
-using MobLibrary;
+
 
 namespace OptionsLibrary
 {
@@ -22,62 +22,62 @@ namespace OptionsLibrary
             switch (direction)
             {
                 case "n":
-                    if (room.ExitN == "N/A" && player.RoomID == "R3")
+                    if (room.North == "N/A" && player.RoomID == "R3")
                     {
                         Console.WriteLine("\nYou ran into the cash register...too bad it's empty.\n");
                     }
 
-                    if (room.ExitN == "N/A" && player.RoomID == "R5")
+                    if (room.North == "N/A" && player.RoomID == "R5")
                     {
                         Console.WriteLine("\nYou walked into the mayor's desk...\n");
                     }
 
 
 
-                    player.RoomID = room.ExitN;
+                    player.RoomID = room.North;
 
                     break;
 
                 case "s":
-                    if (room.ExitS == "N/A" && player.RoomID == "R3")
+                    if (room.North == "N/A" && player.RoomID == "R3")
                     {
                         Console.WriteLine("\nClean up on Aisle 1...\n");
                     }
-                    if (room.ExitN == "N/A" && player.RoomID == "R4")
+                    if (room.North == "N/A" && player.RoomID == "R4")
                     {
                         Console.WriteLine("\nPretty sure that's not chocolate...\n");
                     }
 
-                    player.RoomID = room.ExitS;
+                    player.RoomID = room.South;
                     break;
 
                 case "e":
-                    if (room.ExitE == "N/A" && player.RoomID == "R1")
+                    if (room.East == "N/A" && player.RoomID == "R1")
                     {
                         Console.WriteLine("\nYou walked into your wall...\n");
                     }
-                    if (room.ExitE == "N/A" && player.RoomID == "R4")
+                    if (room.East == "N/A" && player.RoomID == "R4")
                     {
                         Console.WriteLine("\nYou're a tough guy but that Alligator is tougher...\n");
                     }
-                    if (room.ExitE == "N/A" && player.RoomID == "R5")
+                    if (room.East == "N/A" && player.RoomID == "R5")
                     {
                         Console.WriteLine("\nNothing but trash bin.\n");
                     }
-                    player.RoomID = room.ExitE;
+                    player.RoomID = room.East;
                     break;
 
                 case "w":
-                    if (room.ExitW == "N/A" && player.RoomID == "R2")
+                    if (room.West == "N/A" && player.RoomID == "R2")
                     {
                         Console.WriteLine("\nThis is West street territory, even a tough S.O.B like you can't enter a made up territory.\n");
                     }
-                    if (room.ExitW == "N/A" && player.RoomID == "R5")
+                    if (room.West == "N/A" && player.RoomID == "R5")
                     {
                         Console.WriteLine("\nNothing but trash bin.\n");
                     }
 
-                    player.RoomID = room.ExitW;
+                    player.RoomID = room.West;
                     break;
             }
 
@@ -106,10 +106,84 @@ namespace OptionsLibrary
 
 
             room = GameOptions.MakeRoom(rooms, player.RoomID);
-            SearchCommands.ViewRoom(room.RoomName);
+            SearchCommands.ViewRoom(room.Name);
             
 
 
+        }
+
+         public static List<Mobs> MobMovement(GameObjects options)
+        {
+            
+            foreach (Mobs mob in options.Mobs)
+            {
+                Rooms loadedRoom = GameOptions.MakeRoom(options.Rooms, mob.RoomID);
+
+               switch(GetMovement())
+                {
+                    case "n":
+                        if (loadedRoom.North != "N/A")
+                        {
+                            mob.RoomID = loadedRoom.North;
+                        }
+                        break;
+
+                    case "s":
+                        if (loadedRoom.South != "N/A")
+                        {
+                            mob.RoomID = loadedRoom.South;
+                        }
+                        break;
+
+                    case "e":
+                        if (loadedRoom.East != "N/A")
+                        {
+                            mob.RoomID = loadedRoom.East;
+                        }
+                        break;
+
+                    case "w":
+                        if (loadedRoom.West != "N/A")
+                        {
+                            mob.RoomID = loadedRoom.West;
+                        }
+                        break;
+                    case "x":
+
+                        break;
+                }
+
+                if (mob.RoomID == options.Player.RoomID)
+                {
+                    Console.WriteLine($"{mob.Name} lurking about...");
+                }
+
+                
+            }
+            return options.Mobs;
+        }
+
+        private static string GetMovement()
+        {
+            Random rand = new Random();
+            int roulette = rand.Next(1, 24);
+            switch (roulette)
+            {
+                case 1:
+                    return "n";
+
+                case 8:
+                    return "s";
+
+                case 16:
+                    return "e";
+
+                case 24:
+                    return "w";
+
+                default:
+                    return "x";
+            }
         }
     }
 }

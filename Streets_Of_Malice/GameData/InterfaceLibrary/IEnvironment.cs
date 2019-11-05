@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ItemLibrary
+namespace InterfaceLibrary
 {
-    public interface IPlayerItems
+    public interface IEnvironment
     {
 
 
@@ -23,6 +23,7 @@ namespace ItemLibrary
         {
             get; set;
         }
-
+        
+            
     }
 }

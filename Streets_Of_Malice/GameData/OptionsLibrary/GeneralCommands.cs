@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using PlayerLibrary;
+using CharacterLibrary;
 using ItemLibrary;
-using MobLibrary;
 using System.Linq;
 
 namespace OptionsLibrary
 {
     class GeneralCommands
     {
-        public static void ControlMap(string function, string obj, Player player, List<Rooms> rooms, List<Items> items, List<Potions> potions, List<Treasures> treasures, 
-            List<Weapons> weapons, List<Mobs> mobs)
+        public static void ControlMap(string function, string obj, GameObjects options)
         {
 
 
@@ -21,13 +19,13 @@ namespace OptionsLibrary
                 case "room":
                 case "rooms":
                     StandardMessages.DisplayThis("rooms");
-                    SearchCommands.ViewAll(rooms);
+                    SearchCommands.ViewAll(options.Rooms);
                     break;
 
                 //Displays a list of weapons
 
                 case "look":
-                    SearchCommands.LookObject(obj, player, rooms, items, potions, treasures, weapons, mobs);
+                    SearchCommands.LookObject(obj, options);
                     break;
 
 
@@ -37,10 +35,10 @@ namespace OptionsLibrary
 
                     //Standard_Messages.DisplayThis("weapons");
                     //ViewAll(roomid, weaponsList);
-                    weapons.OrderBy(x => x.WeaponName);
-                    foreach (Weapons weapon in weapons)
+                    options.Weapons.OrderBy(x => x.Name);
+                    foreach (Weapons weapon in options.Weapons)
                     {
-                        Console.WriteLine(weapon.WeaponName + " (" + weapon.Damage + " " + weapon.Description + ")\n");
+                        Console.WriteLine(weapon.Name + " (" + weapon.Damage + " " + weapon.Description + ")\n");
                     }
 
                     break;
@@ -49,7 +47,7 @@ namespace OptionsLibrary
                 case "potions":
 
                     StandardMessages.DisplayThis("potions");
-                    SearchCommands.ViewAll(potions);
+                    SearchCommands.ViewAll(options.Potions);
 
                     break;
 
@@ -66,8 +64,9 @@ namespace OptionsLibrary
 
         }
 
-        public static void CommandInput(Player player, List<Rooms> rooms, List<Items> items, List<Potions> potions, List<Treasures> treasures, List<Weapons> weapons, List<Mobs> mobs)
+        public static void CommandInput(GameObjects options)
         {
+            options.Mobs = MovementCommands.MobMovement(options);
             string[] commands = { };
             bool run = true;
             do
@@ -92,7 +91,7 @@ namespace OptionsLibrary
 
                         if (IsMovement(commands[0]))
                         {
-                            MovementCommands.UserMove(commands[0], player, rooms);
+                            MovementCommands.UserMove(commands[0],options.Player, options.Rooms);
                         }
 
 
@@ -101,7 +100,7 @@ namespace OptionsLibrary
                         {
                             if (commands.Length == 1)
                             {
-                                ControlMap(commands[0], "", player, rooms, items, potions, treasures, weapons, mobs);
+                                ControlMap(commands[0], "", options);
                             }
 
                             else
@@ -127,7 +126,7 @@ namespace OptionsLibrary
 
                               
                                 
-                                ControlMap(commands[0], word, player, rooms, items, potions, treasures, weapons, mobs);
+                                ControlMap(commands[0], word, options);
                             }
 
                         }
@@ -139,11 +138,13 @@ namespace OptionsLibrary
                     }
 
                 }
-                CommandInput(player, rooms, items, potions, treasures, weapons, mobs);
+                CommandInput(options);
             }
             while (run == true);
             
         }
+
+       
 
         public static bool IsValidCommand(string command)
         {
