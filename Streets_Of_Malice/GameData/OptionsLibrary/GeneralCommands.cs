@@ -28,6 +28,11 @@ namespace OptionsLibrary
                     SearchCommands.LookObject(obj, options);
                     break;
 
+                case "fight":
+                case "attack":
+                    CombatCommands.StartCombat(options, obj);
+                    break;
+
 
                 case "weapon":
                 case "weapons":
@@ -149,7 +154,7 @@ namespace OptionsLibrary
         public static bool IsValidCommand(string command)
         {
             bool check = false;
-            string[] commandList = { "n", "north", "s", "south", "e", "east", "west", "w", "room", "rooms", "weapon", "weapons", "potion", "potions", "look" };
+            string[] commandList = { "n", "north", "s", "south", "e", "east", "west", "w", "room", "rooms", "weapon", "weapons", "potion", "potions", "look", "attack", "fight" };
             if (commandList.Contains(command))
             {
                 check = true;
