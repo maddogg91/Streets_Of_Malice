@@ -5,7 +5,7 @@ using InterfaceLibrary;
 
 namespace ItemLibrary
 {
-    public class Potions : IEnvironment
+    public class Potions : IEnvironment, IExistsinRoom
     {
         public string ID { get; set; }
         public string Name { get; set; }
@@ -13,14 +13,20 @@ namespace ItemLibrary
 
         public int HP { get; set; }
 
-        public static Potions GetPotions(string id, string name, string desc, int hp)
+        public string Type { get; set; }
+
+        public string RoomID { get; set; }
+
+        public static Potions GetPotions(string id, string name, string desc, int hp, string room)
         {
             return new Potions
             {
                 ID = id,
                 Name = name,
                 Description = desc,
-                HP= hp
+                HP = hp,
+                Type = "Potion",
+                RoomID= room
 
             };
         }

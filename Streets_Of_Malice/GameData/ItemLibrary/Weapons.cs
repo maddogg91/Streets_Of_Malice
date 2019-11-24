@@ -3,7 +3,7 @@ using InterfaceLibrary;
 
 namespace ItemLibrary
 {
-    public class Weapons : IEnvironment
+    public class Weapons : IEnvironment, IExistsinRoom
     {
 
         public string ID { get; set; }
@@ -14,9 +14,13 @@ namespace ItemLibrary
 
         public bool IsEquipped { get; set; }
 
+        public string Type { get; set; }
+
+        public string RoomID { get; set; }
 
 
-        public static Weapons GetWeapons(string id, string name, string desc, int damage)
+
+        public static Weapons GetWeapons(string id, string name, string desc, int damage, string room)
         {
             return new Weapons
             {
@@ -24,8 +28,9 @@ namespace ItemLibrary
                 Name = name,
                 Description = desc,
                 Damage = damage,
-                IsEquipped = false
-
+                IsEquipped = false,
+                Type = "Weapon",
+                RoomID = room
 
             };
         }

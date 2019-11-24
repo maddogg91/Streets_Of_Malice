@@ -23,8 +23,11 @@ namespace CharacterLibrary
 
         public Classes Class { get; set; }
 
-        public Type BodyType { get; set; }
+        public Body BodyType { get; set; }
 
+        public string Type { get; set; }
+
+       
 
 
         public enum Classes
@@ -34,7 +37,7 @@ namespace CharacterLibrary
             Soldier
         }
 
-        public enum Type
+        public enum Body
         {
             Athletic,
             BodyBuilder,
@@ -42,7 +45,7 @@ namespace CharacterLibrary
             Skinny
         }
 
-        public static Player GetPlayer(string user, string password, Classes userClass, Type type, string roomID)
+        public static Player GetPlayer(string user, string password, Classes userClass, Body body, string roomID)
         {
             int attack = 0;
             int hp = 0;
@@ -69,26 +72,26 @@ namespace CharacterLibrary
 
             }
 
-            switch (type)
+            switch (body)
             {
-                case Type.Athletic:
+                case Body.Athletic:
                     attack += 3;
                     hp += 8;
 
                     break;
 
-                case Type.BodyBuilder:
+                case Body.BodyBuilder:
                     attack += 5;
 
                     break;
 
-                case Type.Skinny:
+                case Body.Skinny:
                     attack += 1;
                     hp += 10;
 
                     break;
 
-                case Type.Fat:
+                case Body.Fat:
                     hp += 15;
 
                     break;
@@ -97,8 +100,10 @@ namespace CharacterLibrary
             return new Player
             {
                 ID = "Player",
+                UserName= user,
+                Password = password,
                 Name = user,
-                Description = $"{user}... a {type} {userClass} with a score to settle",
+                Description = $"{user}... a {body} {userClass} with a score to settle",
 
 
 
@@ -106,7 +111,7 @@ namespace CharacterLibrary
                 Attack = attack,
                 RoomID = roomID,
                 Class = userClass,
-                BodyType = type
+                BodyType = body
             };
 
         }

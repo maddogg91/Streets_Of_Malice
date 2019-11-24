@@ -20,6 +20,7 @@ namespace CharacterLibrary
 
         public string RoomID { get; set; }
 
+        public string Type { get; set; }
 
 
         public static Mobs GetMobs(string id, string name, string desc, int hp, int attack, string roomID)
@@ -41,7 +42,7 @@ namespace CharacterLibrary
 
 
                 RoomID = roomID
-
+               
             };
 
 

@@ -13,7 +13,8 @@ namespace OptionsLibrary
     {
         public static void Startup()
         {
-            Player player = Player.GetPlayer(" ", " ", Player.Classes.Brawler, Player.Type.Athletic, "R1");
+            Player player = Player.GetPlayer(" ", " ", Player.Classes.Brawler, Player.Body.Athletic, "R1");
+            GameObjects options = new GameObjects();
             bool run = true;
 
             do
@@ -28,11 +29,13 @@ namespace OptionsLibrary
                         break;
                     case "new game":
                         player = NewPlayer();
+                        CreateUserOptions(player.Name);
+                        options = LoadOptions.InitializeObjects(player);
                         run = false;
                         break;
 
                     case "load game":
-                        player = LoadOptions.LoadPlayer();
+                        options = LoadOptions.LoadObjects(" ");
                         run = false;
                         break;
 
@@ -45,19 +48,33 @@ namespace OptionsLibrary
 
             StandardMessages.TitleCard();
 
-            //int roomid = Map.SwitchRoom(room);
+          
             
             
             
            
            
-            GameObjects options= GameObjects.GetObjects(LoadOptions.LoadMobs(), LoadOptions.LoadRooms(), LoadOptions.LoadItems(), LoadOptions.LoadPotions(), LoadOptions.LoadTreasures(), LoadOptions.LoadWeapons(), player);
+            
             Rooms room = MakeRoom(options.Rooms, options.Player.RoomID);
             SearchCommands.ViewRoom(room.Name);
 
             GeneralCommands.CommandInput(options);
         }
 
+        public static void CreateUserOptions(string user)
+        {
+
+           
+
+            File.Copy($"{Environment.CurrentDirectory}/data/Weapons/Weapons.csv", $"{Environment.CurrentDirectory}/save/{user}/{user}-Weapons.data", true);
+            File.Copy($"{Environment.CurrentDirectory}/data/Items/Items.csv", $"{Environment.CurrentDirectory}/save/{user}/{user}-Items.data", true);
+            File.Copy($"{Environment.CurrentDirectory}/data/Weapons/Weapons.csv", $"{Environment.CurrentDirectory}/save/{user}/{user}-Weapons.data", true);
+            File.Copy($"{Environment.CurrentDirectory}/data/Potions/Potions.csv", $"{Environment.CurrentDirectory}/save/{user}/{user}-Potions.data", true);
+            File.Copy($"{Environment.CurrentDirectory}/data/Rooms/Rooms.csv", $"{Environment.CurrentDirectory}/save/{user}/{user}-Rooms.data", true);
+            File.Copy($"{Environment.CurrentDirectory}/data/Treasures/Treasures.csv", $"{Environment.CurrentDirectory}/save/{user}/{user}-Treasures.data", true);
+            File.Copy($"{Environment.CurrentDirectory}/data/Mobs/Mobs.csv", $"{Environment.CurrentDirectory}/save/{user}/{user}-Mobs.data", true);
+
+        }
      
       
         
@@ -89,7 +106,7 @@ namespace OptionsLibrary
             string user = Console.ReadLine();
             string password = " ";
             Player.Classes userClass = Player.Classes.Brawler;
-            Player.Type type = Player.Type.Athletic;
+            Player.Body type = Player.Body.Athletic;
             do
             {
                 Console.Write("\nEnter a password to load your game when you save your progress: ");
@@ -168,20 +185,20 @@ namespace OptionsLibrary
                 switch (input.ToLower())
                 {
                     case "athletic":
-                        type = Player.Type.Athletic;
+                        type = Player.Body.Athletic;
                         validType = true;
                         break;
 
                     case "body builder":
-                        type = Player.Type.BodyBuilder;
+                        type = Player.Body.BodyBuilder;
                         validType = true;
                         break;
                     case "fat":
-                        type = Player.Type.Fat;
+                        type = Player.Body.Fat;
                         validType = true;
                         break;
                     case "skinny":
-                        type = Player.Type.Skinny;
+                        type = Player.Body.Skinny;
                         validType = true;
                         break;
 
@@ -237,14 +254,56 @@ namespace OptionsLibrary
             }
 
 
-            string path = player.UserName + ".txt";
-            outputFile = File.CreateText(path);
-            outputFile.WriteLine(player.UserName);
-            outputFile.WriteLine(player.Password);
-            outputFile.WriteLine(userClass);
-            outputFile.WriteLine(type);
-            outputFile.WriteLine(roomID);
-            outputFile.Close();
+            string path = player.UserName + ".save";
+            string folder = Environment.CurrentDirectory;
+            try
+            {
+                string[] files = Directory.GetFiles($"{Environment.CurrentDirectory}/save/{player.UserName}");
+                bool prompt = true;
+
+                do
+                {
+                    Console.Write("User exists, would you like to overwrite user or load user\n>");
+                    switch (Console.ReadLine().ToLower())
+                    {
+                        case "overwrite":
+                            prompt = false;
+
+                            Directory.CreateDirectory($"{folder}/save/{player.UserName}");
+                            outputFile = File.CreateText($"{folder}/save/{player.UserName}/{path}");
+                            outputFile.WriteLine(player.UserName);
+                            outputFile.WriteLine(player.Password);
+                            outputFile.WriteLine(userClass);
+                            outputFile.WriteLine(type);
+                            outputFile.WriteLine(roomID);
+                            outputFile.Close();
+                            break;
+
+                        case "load":
+                        case "load user":
+                            Startup();
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid entry");
+                            break;
+
+                    }
+                } while (prompt == true);
+               
+            }
+            catch(DirectoryNotFoundException)
+            {
+                Directory.CreateDirectory($"{folder}/save/{player.UserName}");
+                outputFile = File.CreateText($"{folder}/save/{player.UserName}/{path}");
+                outputFile.WriteLine(player.UserName);
+                outputFile.WriteLine(player.Password);
+                outputFile.WriteLine(userClass);
+                outputFile.WriteLine(type);
+                outputFile.WriteLine(roomID);
+                outputFile.Close();
+            }
+            
 
         }
 

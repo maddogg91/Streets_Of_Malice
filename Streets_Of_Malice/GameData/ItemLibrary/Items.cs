@@ -5,7 +5,7 @@ using InterfaceLibrary;
 
 namespace ItemLibrary
 {
-    public class Items : IEnvironment
+    public class Items : IEnvironment, IExistsinRoom
     {
         public string ID { get; set; }
         public string Name { get; set; }
@@ -13,14 +13,20 @@ namespace ItemLibrary
 
         public int Uses { get; set; }
 
-        public static Items GetItems(string id, string name, string desc, int uses)
+        public string Type { get; set; }
+
+        public string RoomID { get; set; }
+
+        public static Items GetItems(string id, string name, string desc, int uses, string room)
         {
             return new Items
             {
                 ID = id,
                 Name = name,
                 Description = desc,
-                Uses = uses
+                Uses = uses,
+                Type = "Item",
+                RoomID = room
 
             };
         }

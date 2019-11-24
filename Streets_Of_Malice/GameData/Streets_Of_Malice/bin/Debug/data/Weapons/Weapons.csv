@@ -1,0 +1,11 @@
+﻿WeaponID,WeaponName,Damage,Description,RoomID
+W1,Sword,25,Long Iron Sword,R1
+W2,Mace,15,Spiky blunt object,R1
+W3,Baton,10,Iron Stick,R1
+W4,Dagger,10,Sharp and pointy,R1
+W5,Club,5,Wooden weapon,R1
+W6,Knife,15,Can cut onions or enemies,R1
+W7,Bat,15,Swing for the fences,R1
+W8,Axe,30,Meant for trees… best for decapitation,R1
+W9,Pistol,40,Fire iron bullets ,R1
+W10,Brass Knuckles,10,Crack a skull quickly,R1

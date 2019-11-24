@@ -4,6 +4,7 @@ using System.Text;
 using CharacterLibrary;
 using ItemLibrary;
 using System.Linq;
+using InterfaceLibrary;
 
 namespace OptionsLibrary
 {
@@ -11,6 +12,27 @@ namespace OptionsLibrary
     {
         public static void ControlMap(string function, string obj, GameObjects options)
         {
+            List<IExistsinRoom> roomObjects = new List<IExistsinRoom>();
+            foreach (IExistsinRoom roomObject in options.Items)
+            {
+                roomObjects.Add(roomObject);
+            }
+            foreach (IExistsinRoom roomObject in options.Mobs)
+            {
+                roomObjects.Add(roomObject);
+            }
+            foreach (IExistsinRoom roomObject in options.Potions)
+            {
+                roomObjects.Add(roomObject);
+            }
+            foreach (IExistsinRoom roomObject in options.Treasures)
+            {
+                roomObjects.Add(roomObject);
+            }
+            foreach (IExistsinRoom roomObject in options.Weapons)
+            {
+                roomObjects.Add(roomObject);
+            }
 
 
             switch (function)
@@ -25,7 +47,7 @@ namespace OptionsLibrary
                 //Displays a list of weapons
 
                 case "look":
-                    SearchCommands.LookObject(obj, options);
+                    SearchCommands.LookObject(obj, roomObjects);
                     break;
 
                 case "fight":
@@ -34,28 +56,7 @@ namespace OptionsLibrary
                     break;
 
 
-                case "weapon":
-                case "weapons":
-
-
-                    //Standard_Messages.DisplayThis("weapons");
-                    //ViewAll(roomid, weaponsList);
-                    options.Weapons.OrderBy(x => x.Name);
-                    foreach (Weapons weapon in options.Weapons)
-                    {
-                        Console.WriteLine(weapon.Name + " (" + weapon.Damage + " " + weapon.Description + ")\n");
-                    }
-
-                    break;
-
-                case "potion":
-                case "potions":
-
-                    StandardMessages.DisplayThis("potions");
-                    SearchCommands.ViewAll(options.Potions);
-
-                    break;
-
+                
                 default:
 
 
