@@ -11,7 +11,7 @@ namespace OptionsLibrary
     {
         public static void UserMove(string direction, Player player, List<Rooms> rooms)
         {
-            
+
 
             Rooms room = GameOptions.MakeRoom(rooms, player.RoomID);
 
@@ -107,58 +107,67 @@ namespace OptionsLibrary
 
             room = GameOptions.MakeRoom(rooms, player.RoomID);
             SearchCommands.ViewRoom(room.Name);
-            
+
 
 
         }
 
-         public static List<Mobs> MobMovement(GameObjects options)
+        public static List<Mobs> MobMovement(GameObjects options)
         {
-            
+
             foreach (Mobs mob in options.Mobs)
             {
                 Rooms loadedRoom = GameOptions.MakeRoom(options.Rooms, mob.RoomID);
 
-               switch(GetMovement())
+                if (mob.Cooldown > 0)
                 {
-                    case "n":
-                        if (loadedRoom.North != "N/A")
-                        {
-                            mob.RoomID = loadedRoom.North;
-                        }
-                        break;
-
-                    case "s":
-                        if (loadedRoom.South != "N/A")
-                        {
-                            mob.RoomID = loadedRoom.South;
-                        }
-                        break;
-
-                    case "e":
-                        if (loadedRoom.East != "N/A")
-                        {
-                            mob.RoomID = loadedRoom.East;
-                        }
-                        break;
-
-                    case "w":
-                        if (loadedRoom.West != "N/A")
-                        {
-                            mob.RoomID = loadedRoom.West;
-                        }
-                        break;
-                    case "x":
-
-                        break;
+                    mob.Cooldown = mob.Cooldown--;
                 }
 
-                if (mob.RoomID == options.Player.RoomID)
+                else
                 {
-                    Console.WriteLine($"{mob.Name} lurking about...");
+                    switch (GetMovement())
+                    {
+                        case "n":
+                            if (loadedRoom.North != "N/A")
+                            {
+                                mob.RoomID = loadedRoom.North;
+                            }
+                            break;
+
+                        case "s":
+                            if (loadedRoom.South != "N/A")
+                            {
+                                mob.RoomID = loadedRoom.South;
+                            }
+                            break;
+
+                        case "e":
+                            if (loadedRoom.East != "N/A")
+                            {
+                                mob.RoomID = loadedRoom.East;
+                            }
+                            break;
+
+                        case "w":
+                            if (loadedRoom.West != "N/A")
+                            {
+                                mob.RoomID = loadedRoom.West;
+                            }
+                            break;
+                        case "x":
+
+                            break;
+                    }
+
+                    if (mob.RoomID == options.Player.RoomID)
+                    {
+                        Console.WriteLine($"{mob.Name} lurking about...");
+                    }
                 }
 
-                
+
+
             }
             return options.Mobs;
         }

@@ -63,7 +63,7 @@ namespace OptionsLibrary
 
 
             }
-          
+
 
 
 
@@ -71,14 +71,15 @@ namespace OptionsLibrary
 
         public static void CommandInput(GameObjects options)
         {
+
             options.Mobs = MovementCommands.MobMovement(options);
             string[] commands = { };
             bool run = true;
             do
             {
-                
+
                 string input = GetCommand();
-                
+
                 commands = input.Split(' ');
                 string text = commands[0];
                 if (commands.Length == 0)
@@ -96,7 +97,7 @@ namespace OptionsLibrary
 
                         if (IsMovement(commands[0]))
                         {
-                            MovementCommands.UserMove(commands[0],options.Player, options.Rooms);
+                            MovementCommands.UserMove(commands[0], options.Player, options.Rooms);
                         }
 
 
@@ -116,21 +117,21 @@ namespace OptionsLibrary
                                 StringBuilder builder = new StringBuilder();
                                 foreach (string command in commands)
                                 {
-                                    
-                                    if(i!=0 && i < commands.Length)
+
+                                    if (i != 0 && i < commands.Length)
                                     {
                                         word = word + command + " ";
-                                        
+
                                     }
-                                    if(i== commands.Length)
+                                    if (i == commands.Length)
                                     {
                                         word = word + command;
                                     }
                                     i++;
                                 }
 
-                              
-                                
+
+
                                 ControlMap(commands[0], word, options);
                             }
 
@@ -146,10 +147,10 @@ namespace OptionsLibrary
                 CommandInput(options);
             }
             while (run == true);
-            
+
         }
 
-       
+
 
         public static bool IsValidCommand(string command)
         {

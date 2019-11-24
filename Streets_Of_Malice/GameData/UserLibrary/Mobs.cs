@@ -3,7 +3,7 @@ using InterfaceLibrary;
 
 namespace CharacterLibrary
 {
-    public class Mobs : IEnvironment, ICombatant
+    public class Mobs : IEnvironment, ICombatant, IExistsinRoom
     {
 
         //Enviroment Interface
@@ -16,12 +16,16 @@ namespace CharacterLibrary
 
         public int Attack { get; set; }
 
+        public int Cooldown { get; set; }
+
         public string RoomID { get; set; }
-        
-     
+
+
 
         public static Mobs GetMobs(string id, string name, string desc, int hp, int attack, string roomID)
         {
+
+
             return new Mobs
             {
                 ID = id,
@@ -29,10 +33,20 @@ namespace CharacterLibrary
                 Description = desc,
                 HP = hp,
                 Attack = attack,
+
+                Cooldown = 0,
+
+
+
+
+
                 RoomID = roomID
+
             };
+
+
         }
-       
+
 
     }
 }

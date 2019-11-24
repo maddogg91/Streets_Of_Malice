@@ -11,7 +11,7 @@ using ItemLibrary;
 namespace Streets_Of_Malice
 {/**
 
-* October 8th, 2019
+ November 5th, 2019
 
 * CSC 253
 
@@ -19,9 +19,11 @@ namespace Streets_Of_Malice
 * 
 * Robert Charity
 
-* Streets of Malice (Sprint #2)
+* Streets of Malice (Sprint #3)
 * 
-* Streets of Malice is an urban inspired dungeon crawler. Currently the build tests motion north, south, east, and west. Also allows user to see list of all available rooms and weapons.
+* Streets of Malice is an urban inspired dungeon crawler. 
+*
+* This build adds interfaces, a combat class, and mobs that move around.
 
 */
     class Program

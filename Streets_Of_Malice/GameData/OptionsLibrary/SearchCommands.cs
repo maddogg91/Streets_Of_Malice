@@ -13,8 +13,8 @@ namespace OptionsLibrary
         public static void LookObject(string obj, GameObjects options)
         {
 
-            
-            
+
+
 
             foreach (Items element in options.Items)
             {
@@ -22,7 +22,7 @@ namespace OptionsLibrary
                 item = item.ToLower();
                 if (obj.Contains(item))
                 {
-                    
+
                     Console.WriteLine("Item ID: " + element.ID + "\n" + "Item Name: " + element.Name + "\n" + "Item Description: " + element.Description + "\n");
                 }
             }
@@ -33,8 +33,8 @@ namespace OptionsLibrary
                 weapon = weapon.ToLower();
                 if (obj.Contains(weapon))
                 {
-                  
-                    Console.WriteLine("Weapon ID: " + element.ID + "\n" + "Weapon Name: " + element.Name + "\n" + "Weapon Description: " + element.Description + 
+
+                    Console.WriteLine("Weapon ID: " + element.ID + "\n" + "Weapon Name: " + element.Name + "\n" + "Weapon Description: " + element.Description +
                         "\n" + "Weapon Power: " + element.Damage + "\n");
                 }
             }
@@ -45,8 +45,8 @@ namespace OptionsLibrary
                 potion = potion.ToLower();
                 if (obj.Contains(potion))
                 {
-                    
-                    Console.WriteLine("Potion ID: " + element.ID + "\n" + "Potion Name:" +element.Name + "\n" + "Potion Description: "+ element.Description + "\n");
+
+                    Console.WriteLine("Potion ID: " + element.ID + "\n" + "Potion Name:" + element.Name + "\n" + "Potion Description: " + element.Description + "\n");
                 }
             }
 
@@ -57,7 +57,10 @@ namespace OptionsLibrary
                 mob = mob.ToLower();
                 if (obj.Contains(mob))
                 {
-                    
+                    if (element.RoomID == "R6")
+                    {
+                        room.Name = "Graveyard";
+                    }
                     Console.WriteLine("Mob ID: " + element.ID + "\n" + "Mob Name: " + element.Name + "\nMob Description: " + element.Description + "\nCurrent Room: " + room.Name);
                 }
             }
@@ -67,7 +70,7 @@ namespace OptionsLibrary
             //    Console.WriteLine("Command not found");
             //}
 
-            
+
         }
 
 
@@ -84,7 +87,7 @@ namespace OptionsLibrary
             }
 
 
-            
+
 
         }
 
@@ -98,10 +101,10 @@ namespace OptionsLibrary
             }
 
 
-         
+
         }
 
-       
+
 
         public static void ViewAll(string[] data)
 
@@ -115,7 +118,7 @@ namespace OptionsLibrary
             }
 
 
-            
+
 
         }
 
@@ -129,7 +132,7 @@ namespace OptionsLibrary
             }
 
 
-        
+
         }
 
         public static void ViewAll(List<Items> data)
@@ -142,7 +145,7 @@ namespace OptionsLibrary
             }
 
 
-           
+
         }
 
         public static void ViewAll(List<Potions> data)
@@ -155,7 +158,7 @@ namespace OptionsLibrary
             }
 
 
-            
+
         }
 
 
@@ -170,7 +173,7 @@ namespace OptionsLibrary
             }
 
 
-            
+
         }
 
 

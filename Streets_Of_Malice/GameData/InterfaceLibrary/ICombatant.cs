@@ -6,6 +6,10 @@ namespace InterfaceLibrary
 {
     public interface ICombatant
     {
+        string Name
+        {
+            get; set;
+        }
         int HP
         {
             get; set;
@@ -17,9 +21,6 @@ namespace InterfaceLibrary
             get; set;
         }
 
-        string RoomID
-        {
-            get; set;
-        }
+
     }
 }
