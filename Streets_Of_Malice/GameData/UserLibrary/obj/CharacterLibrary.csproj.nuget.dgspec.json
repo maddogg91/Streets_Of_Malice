@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj": {}
+    "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj": {
+    "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj",
         "projectName": "InterfaceLibrary",
-        "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj"
+        "projectPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
+    "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
         "projectName": "ItemLibrary",
-        "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
+        "projectPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj",
         "packagesPath": "C:\\Users\\maddogg91\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\obj\\",
+        "outputPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,8 +41,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj": {
-                "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj"
+              "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj": {
+                "projectPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj"
               }
             }
           }
@@ -64,27 +64,21 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     },
-    "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj": {
+    "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj",
         "projectName": "CharacterLibrary",
-        "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj",
+        "projectPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\CharacterLibrary.csproj",
         "packagesPath": "C:\\Users\\maddogg91\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\obj\\",
+        "outputPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\UserLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -103,11 +97,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj": {
-                "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj"
+              "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj": {
+                "projectPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\InterfaceLibrary\\InterfaceLibrary.csproj"
               },
-              "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
-                "projectPath": "C:\\Users\\maddogg91\\source\\repos\\maddogg91\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj"
+              "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj": {
+                "projectPath": "C:\\Users\\maddogg91\\Source\\Repos\\Streets_Of_Malice\\Streets_Of_Malice\\GameData\\ItemLibrary\\ItemLibrary.csproj"
               }
             }
           }
@@ -129,16 +123,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }

@@ -1,0 +1,5 @@
+﻿PotionID,PotionName,Description,HP,RoomID
+P1,Milk,Milk was a bad choice today,10,R3
+P2,Beer,Cheap Beer but still good,15,R1
+P3,Orange Juice,OJ keeps me running,20,R5
+P4,Coffee,Best part of waking up,30,R4

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OptionsLibrary
 {
-    class StandardMessages
+    public class StandardMessages
     {
-        public static void TitleCard()
+        public static string TitleCard()
         {
             //Gonna put this in standard messages when it's created.
             string title = " .oooooo..o     .                                    .            \n" +
@@ -38,24 +38,34 @@ namespace OptionsLibrary
 
 
 
-            Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n" + title + title2 + title3 + "\nPress Enter to continue");
-            Console.ReadLine();
-            Console.WriteLine("\n\n\n\n\n\n\n");
-            Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou wake up in your dirty apartment... It's loud outside... sounds like the manics are out causing chaos on main street.");
+            string message= "\n\n\n\n\n\n\n\n\n\n\n\n\n" + title + title2 + title3 + "\nPress Enter to continue";
+            return message;
+            
 
 
 
         }
 
-        public static void DisplayThis(string word)
+        public static string DisplayIntro()
         {
-            Console.WriteLine("\nHere are the list of " + word + ":");
+            string message= "\n\n\n\n\n\n\n"+
+           "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou wake up in your dirty apartment... It's loud outside..."+
+           "sounds like the manics are out causing chaos on main street.";
+            return message;
         }
 
-        public static void DisplayAll(object entry)
+        public static string DisplayThis(string word)
+        {
+            string message = "\nHere are the list of " + word + ":";
+            return message;
+        }
+
+        public static string DisplayAll(object entry)
         {
 
-            Console.WriteLine(">>>>> " + entry + "\n");
+           string message = ">>>>> " + entry + "\n";
+
+            return message;
         }
 
     }

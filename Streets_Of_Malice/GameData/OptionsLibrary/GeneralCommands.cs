@@ -8,7 +8,7 @@ using InterfaceLibrary;
 
 namespace OptionsLibrary
 {
-    class GeneralCommands
+    public class GeneralCommands
     {
         public static void ControlMap(string function, string obj, GameObjects options)
         {

@@ -19,6 +19,7 @@ namespace OptionsLibrary
 
             do
             {
+                
                 Console.WriteLine("Enter new game or load game");
                 string input = Console.ReadLine();
                 switch (input.ToLower())
@@ -26,6 +27,7 @@ namespace OptionsLibrary
 
                     case "skip":
                         run = false;
+                        
                         break;
                     case "new game":
                         player = NewPlayer();

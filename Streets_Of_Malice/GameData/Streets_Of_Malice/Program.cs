@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using CharacterLibrary;
 using OptionsLibrary;
 using ItemLibrary;
-
+using System.Windows;
+using System.Windows.Controls;
+using GameScreen;
 
 namespace Streets_Of_Malice
 {/**
 
- November 5th, 2019
+ November 28th, 2019
 
 * CSC 253
 
@@ -19,19 +21,27 @@ namespace Streets_Of_Malice
 * 
 * Robert Charity
 
-* Streets of Malice (Sprint #3)
+* Streets of Malice (Sprint #4)
 * 
 * Streets of Malice is an urban inspired dungeon crawler. 
 *
-* This build adds interfaces, a combat class, and mobs that move around.
+* This build adds a WPF screen for new game or load game functionality, among other smaller features.
 
 */
     class Program
     {
-
+        [STAThread]
         static void Main(string[] args)
         {
-            GameOptions.Startup();
+
+
+            Window titleScreen = new Title();
+            titleScreen.ShowDialog();
+            
+          
+
+            
+            //GameOptions.Startup();
 
 
            
